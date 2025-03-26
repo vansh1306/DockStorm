@@ -90,6 +90,7 @@ docker run -p 8501:8501 weather-app
 
 ### 4️⃣ **Open in Browser**
 🌐 Go to → [http://localhost:8501](http://localhost:8501)
+![image](https://github.com/vansh1306/Docker_Work/blob/main/2.%20Dockerized%20Streamlit%20Development%20Environment/image.png?raw=true)
 
 ## 🎯 Conclusion
 You now have a **fully functional Weather Prediction app** running inside Docker! 🚀
