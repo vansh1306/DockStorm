@@ -10,7 +10,7 @@ This experiment demonstrates how to use Docker **bind mounts** with a **Linux co
 ### 🏗 Step 1: Running a Container with a Bind Mount
 You executed:
 ```sh
-docker run -dit --name alpine_with_bind_mount -v C:\Users\asus\docker_data:/data alpine:latest sh
+docker run -dit --name alpine_with_bind_mount -v C:\Users\Vansh\docker_data:/data alpine:latest sh
 ```
 #### 🔍 What Happened?
 - Since `alpine:latest` was not found locally, Docker pulled it from the official repository.
