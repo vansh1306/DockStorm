@@ -27,13 +27,13 @@ A **custom bridge network** offers several advantages:
 ✅ **DNS-Based Resolution** – Containers communicate via names instead of IPs.
 ✅ **Greater Control** – Define specific **subnets, IP ranges, and gateways**.
 
-To demonstrate, we create a **custom bridge network** called `vidhi-bridge` and connect multiple containers.
+To demonstrate, we create a **custom bridge network** called `vansh-bridge` and connect multiple containers.
 
 ---
 
 ## 🔧 1. Creating a Custom Bridge Network
 ```bash
-docker network create --driver bridge --subnet 172.20.0.0/16 --ip-range 172.20.240.0/20 vidhi-bridge
+docker network create --driver bridge --subnet 172.20.0.0/16 --ip-range 172.20.240.0/20 vansh-bridge
 ```
 ### 🔍 Explanation:
 - `--driver bridge` → Uses the default **bridge network mode**.
@@ -43,57 +43,57 @@ docker network create --driver bridge --subnet 172.20.0.0/16 --ip-range 172.20.2
 ---
 
 ## 🚀 2. Running Containers in the Custom Network
-### Running **Redis Container** (`vidhi-database`)
+### Running **Redis Container** (`vansh-database`)
 ```bash
-docker run -itd --net=vidhi-bridge --name=vidhi-database redis
+docker run -itd --net=vansh-bridge --name=vansh-database redis
 ```
-### Running **BusyBox Container** (`vidhi-server-A`)
+### Running **BusyBox Container** (`vansh-server-A`)
 ```bash
-docker run -itd --net=vidhi-bridge --name=vidhi-server-A busybox
+docker run -itd --net=vansh-bridge --name=vansh-server-A busybox
 ```
 
 ### 📌 Check Container IPs
 ```bash
-docker network inspect vidhi-bridge
+docker network inspect vansh-bridge
 ```
 Expected Output:
 ```
- vidhi-database: 172.20.240.1
- vidhi-server-A: 172.20.240.2
+ vansh-database: 172.20.240.1
+ vansh-server-A: 172.20.240.2
 ```
 
 ---
 
 ## 📔 3. Testing Communication Between Containers
-### Ping from **vidhi-database** to **vidhi-server-A**
+### Ping from **vansh-database** to **vansh-server-A**
 ```bash
-docker exec -it vidhi-database ping 172.20.240.2
+docker exec -it vansh-database ping 172.20.240.2
 ```
 ### Ping from **vidhi-server-A** to **vidhi-database**
 ```bash
-docker exec -it vidhi-server-A ping 172.20.240.1
+docker exec -it vansh-server-A ping 172.20.240.1
 ```
 ✅ Expected Outcome: Both containers should successfully **ping** each other.
 
 ---
 
 ## 🚧 4. Demonstrating Network Isolation with a Third Container
-We add another container (`vidhi-server-B`) on the **default bridge network**.
+We add another container (`vansh-server-B`) on the **default bridge network**.
 ```bash
-docker run -itd --name=vidhi-server-B busybox
+docker run -itd --name=vansh-server-B busybox
 ```
-### 📌 Get IP of `vidhi-server-B`
+### 📌 Get IP of `vansh-server-B`
 ```bash
-docker inspect -format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' vidhi-server-B
+docker inspect -format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' vansh-server-B
 ```
 (Example IP: `172.17.0.2`)
 
 ---
 
 ## ❌ 5. Testing Communication Between Different Networks
-Ping from `vidhi-database` to `vidhi-server-B`:
+Ping from `vansh-database` to `vansh-server-B`:
 ```bash
-docker exec -it vidhi-database ping 172.17.0.2
+docker exec -it vansh-database ping 172.17.0.2
 ```
 🚨 **Expected Outcome:** The ping should **fail**, as they are on different networks.
 
@@ -102,11 +102,11 @@ docker exec -it vidhi-database ping 172.17.0.2
 ## 🔍 6. Confirming Network Isolation
 ### Inspect Networks
 ```bash
-docker network inspect vidhi-bridge
+docker network inspect vansh-bridge
 docker network inspect bridge
 ```
-✅ `vidhi-bridge` should contain `vidhi-database` & `vidhi-server-A`.
-✅ `bridge` should contain `vidhi-server-B`.
+✅ `vansh-bridge` should contain `vansh-database` & `vansh-server-A`.
+✅ `bridge` should contain `vansh-server-B`.
 
 ---
 
