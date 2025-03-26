@@ -42,23 +42,22 @@ This file contains the **core logic** of the Weather Prediction application, inc
 Defines the **containerized environment** for Streamlit.
 ```dockerfile
 # Use a lightweight Python image
-FROM python:3.9-slim  
 
-# Set working directory
-WORKDIR /app  
+FROM python:3.8-slim
 
-# Copy dependencies and install them
-COPY requirements.txt /app/  
-RUN pip install --no-cache-dir -r requirements.txt  
+WORKDIR /app
 
-# Copy all project files
-COPY . /app/  
+# Install pip requirements
+COPY requirements.txt /app
+RUN python -m pip install -r requirements.txt
 
-# Expose Streamlit’s default port
-EXPOSE 8501  
+COPY app.py /app
 
-# Run the Streamlit app
-CMD ["streamlit", "run", "src/main.py", "--server.port=8501", "--server.address=0.0.0.0"]
+EXPOSE 8501
+
+# During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+
 ```
 
 ### 4️⃣ `requirements.txt`
