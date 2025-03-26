@@ -1,6 +1,6 @@
-# 🌦️ Dockerized Streamlit Weather Prediction App
+# 🌦️ Dockerized Streamlit Weather Forecasting App
 
-This guide helps you set up a **Weather Prediction** application inside a **Docker** container for an efficient and portable development experience. 🚀
+This guide helps you set up a **Weather Forecast** application inside a **Docker** container for an efficient and portable development experience. 🚀
 
 ## ✅ Prerequisites
 Before setting up the environment, ensure you have the following installed on your machine:
@@ -93,7 +93,7 @@ docker run -p 8501:8501 weather-app
 ![image](https://github.com/vansh1306/Docker_Work/blob/main/2.%20Dockerized%20Streamlit%20Development%20Environment/image.png?raw=true)
 
 ## 🎯 Conclusion
-You now have a **fully functional Weather Prediction app** running inside Docker! 🚀
+You now have a **fully functional Weather Forecast app** running inside Docker! 🚀
 
 ## 💡 Next Steps:
 - 🔹 Improve the **weather prediction model**.
