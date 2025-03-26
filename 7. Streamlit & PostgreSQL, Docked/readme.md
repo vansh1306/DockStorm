@@ -32,7 +32,7 @@ This network allows PostgreSQL and the Streamlit app to communicate.
 
 ### Step 3: Run the PostgreSQL Container
 ```sh
-docker run --name my_postgres_container --network my_postgres_network -e POSTGRES_USER=vidhi -e POSTGRES_PASSWORD=secret -e POSTGRES_DB=testdb -p 5432:5432 -d postgres
+docker run --name my_postgres_container --network my_postgres_network -e POSTGRES_USER=vansh -e POSTGRES_PASSWORD=complex -e POSTGRES_DB=testdb -p 5432:5432 -d postgres
 ```
 This starts a PostgreSQL container with authentication settings.
 
@@ -41,7 +41,7 @@ This starts a PostgreSQL container with authentication settings.
 ## 💊 Creating and Populating the Database
 ### Step 4: Access PostgreSQL
 ```sh
-docker exec -it my_postgres_container psql -U vidhi -d testdb
+docker exec -it my_postgres_container psql -U vansh -d testdb
 ```
 
 ### Step 5: Create the `passengers` Table
@@ -56,9 +56,9 @@ CREATE TABLE passengers (
 ### Step 6: Insert Sample Data
 ```sql
 INSERT INTO passengers (name, location) VALUES
-('Vidhi', 'Pathankot'),
-('Aryan', 'Jind'),
-('Coach Saab', 'Atta');
+('Vansh', 'Delhi'),
+('Shaswat', 'Punjab'),
+('Rahul', 'Bangalore');
 ```
 
 ---
