@@ -15,7 +15,7 @@ docker run -dit --name alpine_with_bind_mount -v C:\Users\asus\docker_data:/data
 #### 🔍 What Happened?
 - Since `alpine:latest` was not found locally, Docker pulled it from the official repository.
 - A new container named **alpine_with_bind_mount** was created.
-- The `-v` flag mounted the local directory `C:\Users\asus\docker_data` to `/data` inside the container.
+- The `-v` flag mounted the local directory `C:\Users\Vansh\docker_data` to `/data` inside the container.
 - The container started a shell (`sh`) in detached mode.
 
 ---
@@ -23,12 +23,12 @@ docker run -dit --name alpine_with_bind_mount -v C:\Users\asus\docker_data:/data
 ### 📄 Step 2: Creating a File Inside the Bind Mount
 Inside the container, you created a file:
 ```sh
-docker exec -it alpine_with_bind_mount sh -c "echo 'Hello, Vidhi!' > /data/testfile.txt"
+docker exec -it alpine_with_bind_mount sh -c "echo 'Hello, Vansh!' > /data/testfile.txt"
 ```
 #### 🔍 What Happened?
 - The command executed a shell inside the running container.
-- It created a file `testfile.txt` inside `/data` and wrote **"Hello, Vidhi!"** into it.
-- Since `/data` is a bind-mounted directory, the file was actually stored in `C:\Users\asus\docker_data` on the host.
+- It created a file `testfile.txt` inside `/data` and wrote **"Hello, Vansh!"** into it.
+- Since `/data` is a bind-mounted directory, the file was actually stored in `C:\Users\Vansh\docker_data` on the host.
 
 ---
 
@@ -39,7 +39,7 @@ docker exec -it alpine_with_bind_mount sh -c "cat /data/testfile.txt"
 ```
 #### 📌 Output:
 ```
-Hello, Vidhi!
+Hello, Vansh!
 ```
 This confirms that the file was successfully created and accessible inside the container. 🎉
 
@@ -59,11 +59,11 @@ docker rm -f alpine_with_bind_mount
 ### 🔄 Step 5: Creating a New Container with the Same Bind Mount
 You started a new container:
 ```sh
-docker run -dit --name new_alpine -v C:\Users\asus\docker_data:/data alpine sh
+docker run -dit --name new_alpine -v C:\Users\Vansh\docker_data:/data alpine sh
 ```
 #### 🔍 What Happened?
 - A new container named **new_alpine** was created.
-- The same bind-mounted directory (`C:\Users\asus\docker_data`) was mounted to `/data`.
+- The same bind-mounted directory (`C:\Users\Vansh\docker_data`) was mounted to `/data`.
 
 ---
 
