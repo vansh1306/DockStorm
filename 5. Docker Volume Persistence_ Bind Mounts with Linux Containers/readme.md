@@ -74,7 +74,7 @@ docker exec -it new_alpine sh -c "cat /data/testfile.txt"
 ```
 #### 📌 Output:
 ```
-Hello, Vidhi!
+Hello, Vansh!
 ```
 This confirms that **bind mounts persist data even after a container is removed**. 🔥
 
