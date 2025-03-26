@@ -31,7 +31,7 @@ runOnSave = true
 fileWatcherType = "poll"
 ```
 
-### 2️⃣ `src/main.py`
+### 2️⃣ `src/weat.py`
 This file contains the **core logic** of the Weather Prediction application, including:
 
 - 🏠 **Home Page** → Introduction to the app.
