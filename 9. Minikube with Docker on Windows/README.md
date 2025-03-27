@@ -57,7 +57,7 @@ Verify installation:
 ```bash
 kubectl version --client
 ```
-![image](https://github.com/vansh1306/Docker_Work/blob/main/9.%20Minikube%20with%20Docker%20on%20Windows/images/1.png?raw=true)
+![image](https://github.com/vansh1306/Docker_Work/blob/main/9.%20Minikube%20with%20Docker%20on%20Windows/images/1.png)
 ![image](https://github.com/vansh1306/Docker_Work/blob/main/9.%20Minikube%20with%20Docker%20on%20Windows/images/2.png?raw=true)
 ![image](https://github.com/vansh1306/Docker_Work/blob/main/9.%20Minikube%20with%20Docker%20on%20Windows/images/3.png?raw=true)
 ![image](https://github.com/vansh1306/Docker_Work/blob/main/9.%20Minikube%20with%20Docker%20on%20Windows/images/4.png?raw=true)
