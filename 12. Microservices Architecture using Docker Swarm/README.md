@@ -63,7 +63,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Vidhi Jaju"
+    return "Vansh Srivastava"
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
@@ -126,7 +126,7 @@ Verify the built images:
 ```bash
 docker images
 ```
-![img4](https://github.com/vidhi-jaju/DockSpace/blob/aae38f3f0ed617580f8d6f4b6722b2a67314d0b4/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/4.png)
+
 
 ---
 
@@ -207,7 +207,7 @@ http://localhost:8080
 
 Expected output:
 ```
-API Gateway: Vidhi Jaju
+API Gateway: Vansh Srivastava
 ```
 ![img](https://github.com/vidhi-jaju/DockSpace/blob/aae38f3f0ed617580f8d6f4b6722b2a67314d0b4/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/web%20output.png)
 
