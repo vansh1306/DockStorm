@@ -29,7 +29,7 @@ docker swarm init
 This command makes your machine the **Swarm Manager**.
 
 ---
-![img1](https://github.com/vidhi-jaju/DockSpace/blob/aae38f3f0ed617580f8d6f4b6722b2a67314d0b4/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/1.png)
+![img1](https://github.com/vansh1306/Docker_Work/blob/main/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/1.png?raw=true)
 
 ## **Step 2: Project Setup**
 
@@ -116,9 +116,9 @@ Navigate to your project directory and build the images:
 docker build -t backend-service ./backend-service
 docker build -t api-gateway ./api-gateway
 ```
-![img2](https://github.com/vidhi-jaju/DockSpace/blob/aae38f3f0ed617580f8d6f4b6722b2a67314d0b4/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/2.png)
+![img2](https://github.com/vansh1306/Docker_Work/blob/main/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/2.png?raw=true)
 
-![img3](https://github.com/vidhi-jaju/DockSpace/blob/aae38f3f0ed617580f8d6f4b6722b2a67314d0b4/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/3.png)
+![img3](https://github.com/vansh1306/Docker_Work/blob/main/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/3.png?raw=true)
 
 
 Verify the built images:
@@ -176,7 +176,7 @@ Deploy your services to the **Docker Swarm cluster** using:
 ```bash
 docker stack deploy -c docker-compose.yml my_microservices
 ```
-![img5](https://github.com/vidhi-jaju/DockSpace/blob/aae38f3f0ed617580f8d6f4b6722b2a67314d0b4/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/5.png)
+![img5](https://github.com/vansh1306/Docker_Work/blob/main/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/5.png?raw=true)
 
 ---
 
@@ -193,7 +193,7 @@ List the running containers:
 ```bash
 docker ps
 ```
-![img6](https://github.com/vidhi-jaju/DockSpace/blob/aae38f3f0ed617580f8d6f4b6722b2a67314d0b4/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/6.png)
+![img6](https://github.com/vansh1306/Docker_Work/blob/main/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/6.png?raw=true)
 
 ---
 
@@ -226,7 +226,7 @@ Verify the scaled services:
 ```bash
 docker stack services my_microservices
 ```
-![img7](https://github.com/vidhi-jaju/DockSpace/blob/aae38f3f0ed617580f8d6f4b6722b2a67314d0b4/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/7.png)
+![img7](https://github.com/vansh1306/Docker_Work/blob/main/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/7.png?raw=true)
 
 ---
 
@@ -253,7 +253,7 @@ To **remove the deployed stack**, run:
 ```bash
 docker stack rm my_microservices
 ```
-![img8](https://github.com/vidhi-jaju/DockSpace/blob/aae38f3f0ed617580f8d6f4b6722b2a67314d0b4/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/8.png)
+![img8](https://github.com/vansh1306/Docker_Work/blob/main/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/8.png?raw=true)
 
 To **leave Docker Swarm**, run:
 
