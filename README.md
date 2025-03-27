@@ -42,15 +42,7 @@ Whether it's **optimizing resource management, deploying microservices, or integ
 
 ### 9️⃣ **Minikube with Docker on Windows ☸️**  
 🔹 **Objective:** Configure Minikube to run Kubernetes clusters locally within a Docker environment on Windows.  
-🔹 **Focus Areas:** Kubernetes setup, Minikube optimization, and local development best practices.  
-
-### 🔟 **Deploying a Streamlit App in Docker on AWS EC2 ☁️**  
-🔹 **Objective:** Host a fully containerized Streamlit application on AWS EC2 for reliable and scalable web deployment.  
-🔹 **Focus Areas:** Cloud networking, container orchestration, and security best practices.  
-
-### 1️⃣1️⃣ **Microservices Orchestration with Minikube & Kubernetes ☸️**  
-🔹 **Objective:** Deploy and manage microservices efficiently using Kubernetes and Minikube.  
-🔹 **Focus Areas:** Service discovery, automated scaling, and microservices coordination.  
+🔹 **Focus Areas:** Kubernetes setup, Minikube optimization, and local development best practices.   
 
 ### 1️⃣2️⃣ **Microservices Architecture using Docker Swarm ⚓**  
 🔹 **Objective:** Implement a microservices-based application using Docker Swarm for enhanced scalability.  
