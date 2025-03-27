@@ -8,7 +8,7 @@ Whether it's **optimizing resource management, deploying microservices, or integ
 
 ## 📦 **Projects Anchored in DockStorm**  
 
-### 1️⃣ **DOCKER BASICS: Hello, Container World! 🐳**  
+### 1️⃣ **DOCKER Introduction 🐳**  
 🔹 **Objective:** Begin my Docker adventure by running the simplest container: "Hello World."  
 🔹 **Focus Areas:** Learning essential Docker commands, understanding image execution, and container lifecycles.  
 
