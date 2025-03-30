@@ -42,7 +42,11 @@ Whether it's **optimizing resource management, deploying microservices, or integ
 
 ### 9️⃣ **Minikube with Docker on Windows ☸️**  
 🔹 **Objective:** Configure Minikube to run Kubernetes clusters locally within a Docker environment on Windows.  
-🔹 **Focus Areas:** Kubernetes setup, Minikube optimization, and local development best practices.   
+🔹 **Focus Areas:** Kubernetes setup, Minikube optimization, and local development best practices. 
+
+### 1️⃣1️⃣ **Microservices Architecture using Docker Swarm ⚓**
+🔹 **Objective:** Build and deploy a scalable microservices-based application using Docker Swarm.  
+🔹 **Focus Areas:** Load balancing, service discovery, and distributed application management.
 
 ### 1️⃣2️⃣ **Microservices Architecture using Docker Swarm ⚓**  
 🔹 **Objective:** Implement a microservices-based application using Docker Swarm for enhanced scalability.  
