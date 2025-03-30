@@ -47,10 +47,10 @@ minikube start --driver=docker
 ### **2️⃣ Set Up Docker Environment**
 Configure Docker to use Minikube’s Docker daemon:
 ```bash
-eval $(minikube -p minikube docker-env)
+minikube -p minikube docker-env | Invoke-Expression
 ```
 
-![img1](https://github.com/vidhi-jaju/DockSpace/blob/34f3d29c5557ad9b4642272bab0635b0ce3eab3b/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/1.png)
+![img1](https://github.com/vansh1306/DockStorm/blob/main/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/1.png)
 
 ### **3️⃣ Build and Deploy Services**
 
@@ -62,7 +62,7 @@ docker build -t backend-service .
 # Deploy the backend service
 kubectl apply -f ../kubernetes/backend-service.yaml
 ```
-![img2](https://github.com/vidhi-jaju/DockSpace/blob/34f3d29c5557ad9b4642272bab0635b0ce3eab3b/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/2.png)
+![img2](https://github.com/vansh1306/DockStorm/blob/main/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/2.png)
 #### **🔹 API Gateway**
 ```bash
 cd ../api-gateway
@@ -71,7 +71,7 @@ docker build -t api-gateway .
 # Deploy the API Gateway
 kubectl apply -f ../kubernetes/api-gateway.yaml
 ```
-![img3](https://github.com/vidhi-jaju/DockSpace/blob/34f3d29c5557ad9b4642272bab0635b0ce3eab3b/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/3.png)
+![img3](https://github.com/vansh1306/DockStorm/blob/main/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/3.png)
 
 ### **4️⃣ Verify Deployment**
 Check if everything is running correctly:
@@ -79,16 +79,16 @@ Check if everything is running correctly:
 kubectl get deployments
 kubectl get services
 ```
-![img4](https://github.com/vidhi-jaju/DockSpace/blob/34f3d29c5557ad9b4642272bab0635b0ce3eab3b/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/4.png)
+![img4](https://github.com/vansh1306/DockStorm/blob/main/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/4a.png)
 ### **5️⃣ Access the Application**
 Expose and access the **API Gateway** service:
 ```bash
 minikube service api-gateway
 ```
 This opens a browser with the API Gateway response.
-![img5](https://github.com/vidhi-jaju/DockSpace/blob/34f3d29c5557ad9b4642272bab0635b0ce3eab3b/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/6.png)
+![img5](https://github.com/vansh1306/DockStorm/blob/main/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/6.png)
 
-![img6](https://github.com/vidhi-jaju/DockSpace/blob/34f3d29c5557ad9b4642272bab0635b0ce3eab3b/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/5.png)
+![img6](https://github.com/vansh1306/DockStorm/blob/main/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/5.png)
 
 ### **6️⃣ Monitoring and Debugging**
 To check logs for debugging:
@@ -100,11 +100,11 @@ kubectl logs deployment/backend-service
 # Get pod details
 kubectl describe pods
 ```
-![img7](https://github.com/vidhi-jaju/DockSpace/blob/34f3d29c5557ad9b4642272bab0635b0ce3eab3b/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/7.png)
+![img7](https://github.com/vansh1306/DockStorm/blob/main/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/7.png)
 
-![img8](https://github.com/vidhi-jaju/DockSpace/blob/34f3d29c5557ad9b4642272bab0635b0ce3eab3b/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/8.png)
+![img8](https://github.com/vansh1306/DockStorm/blob/main/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/8.png)
 
-![img9](https://github.com/vidhi-jaju/DockSpace/blob/34f3d29c5557ad9b4642272bab0635b0ce3eab3b/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/9.png)
+![img9](https://github.com/vansh1306/DockStorm/blob/main/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/9.png)
 
 ### **7️⃣ Clean Up Resources**
 When you're done, clean up everything:
@@ -115,7 +115,7 @@ kubectl delete -f kubernetes/backend-service.yaml
 # Stop Minikube
 minikube stop
 ```
-![img10](https://github.com/vidhi-jaju/DockSpace/blob/34f3d29c5557ad9b4642272bab0635b0ce3eab3b/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/10.png)
+![img10](https://github.com/vansh1306/DockStorm/blob/main/11.Microservices%20Orchestration%20with%20Minikube%20and%20Kubernetes/images/10.png)
 
 ---
 
