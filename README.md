@@ -53,7 +53,7 @@ Whether it's **optimizing resource management, deploying microservices, or integ
 🔹 **Focus Areas:** Service orchestration, fault tolerance, and cluster load balancing.  
 
 ### 1️⃣3️⃣ **Bakery Foundation Example on Windows 🍞**  
-🔹 **Objective:** Set up **Packer** on Windows to automate the creation of custom AWS AMIs with pre-installed Python 3.9.  
+🔹 **Objective:** Set up **Packer** on Windows to automate the creation of custom AWS AMIs with pre-installed Python 3.9.
 🔹 **Focus Areas:** Infrastructure as code, cloud automation, and efficient provisioning of development environments.  
 
 ---  
