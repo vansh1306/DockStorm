@@ -35,6 +35,7 @@ unzip packer_1.10.0_linux_amd64.zip
 sudo mv packer /usr/local/bin/
 packer --version
 ```
+![img1](https://github.com/vansh1306/DockStorm/blob/main/13.%20Bakery%20Foundation%20Example%20on%20Windows/images/1.jpg)
 
 ### 2. Install AWS CLI
 
@@ -42,6 +43,7 @@ packer --version
 sudo apt install awscli -y
 aws --version
 ```
+![img1](https://github.com/vansh1306/DockStorm/blob/main/13.%20Bakery%20Foundation%20Example%20on%20Windows/images/3.jpg)
 
 ### 3. Configure AWS CLI
 
@@ -53,6 +55,7 @@ aws configure
 # Default region: us-east-1 (or your region)
 # Output format: json
 ```
+![img1](https://github.com/vansh1306/DockStorm/blob/main/13.%20Bakery%20Foundation%20Example%20on%20Windows/images/2.jpg)
 
 ---
 
@@ -108,8 +111,8 @@ build {
 ```bash
 aws ec2 describe-images   --owners 099720109477   --filters "Name=name,Values=ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"   --query "Images | sort_by(@, &CreationDate)[-1].ImageId"   --region us-east-1   --output text
 ```
-
 ---
+![img1](https://github.com/vansh1306/DockStorm/blob/main/13.%20Bakery%20Foundation%20Example%20on%20Windows/images/4.jpg)
 
 ## ⚙️ Build and Bake the AMI
 
@@ -120,12 +123,18 @@ cd packer-bakery
 packer init .
 packer validate bakery.pkr.hcl
 ```
+![img1](https://github.com/vansh1306/DockStorm/blob/main/13.%20Bakery%20Foundation%20Example%20on%20Windows/images/5.jpg)
+
 
 ### Step 2: Build the AMI 🎂
 
 ```bash
 packer build bakery.pkr.hcl
 ```
+![img1](https://github.com/vansh1306/DockStorm/blob/main/13.%20Bakery%20Foundation%20Example%20on%20Windows/images/6.jpg)
+![img1](https://github.com/vansh1306/DockStorm/blob/main/13.%20Bakery%20Foundation%20Example%20on%20Windows/images/7.jpg)
+
+
 
 ☑️ This will:
 - Launch a temporary EC2 instance
@@ -139,6 +148,7 @@ packer build bakery.pkr.hcl
 
 ### Step 1: Go to AWS Console → EC2 → AMIs
 - Look for the AMI named: `bakery-foundation-python39-<timestamp>`
+![img1](https://github.com/vansh1306/DockStorm/blob/main/13.%20Bakery%20Foundation%20Example%20on%20Windows/images/8.jpg)
 
 ### Step 2: Launch an Instance
 - Go to **Instances → Launch Instance**
@@ -148,6 +158,7 @@ packer build bakery.pkr.hcl
 - Allow SSH (port 22) in Security Group
 
 ---
+![img1](https://github.com/vansh1306/DockStorm/blob/main/13.%20Bakery%20Foundation%20Example%20on%20Windows/images/11.jpg)
 
 ## 🔗 SSH into Instance (Ubuntu)
 
@@ -157,6 +168,7 @@ ssh -i "your-key.pem" ubuntu@<your-instance-ip>
 ```
 
 ---
+![img1](https://github.com/vansh1306/DockStorm/blob/main/13.%20Bakery%20Foundation%20Example%20on%20Windows/images/10.jpg)
 
 ## 🐍 Verify Python Installation
 
@@ -180,6 +192,7 @@ python --version  # Should now show 3.9.5
 ```
 
 ---
+![img1](https://github.com/vansh1306/DockStorm/blob/main/13.%20Bakery%20Foundation%20Example%20on%20Windows/images/12.jpg)
 
 ## 🧠 Why This Matters
 
@@ -202,13 +215,3 @@ If you find this useful, feel free to:
 - ⭐ Star the repo
 - 🍴 Fork and customize
 - 📥 Open issues or pull requests
-
----
-
-## 📜 License
-
-MIT License
-
----
-
-Built with ❤️ by [Your Name]
